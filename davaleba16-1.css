@@ -19,11 +19,11 @@ body{
 .desktop {
     display: flex;
     position: relative;
-    width: 1920px;
-    height: 1080px;
+    width: 100%;
+    
 }
 .container1 {
-    width: 100%;
+    width: 60%;
     
     background: #515DEF;
     display: flex;
@@ -62,18 +62,20 @@ body{
     display: flex;
     height: 30px;
     margin-right: 200px;
-  
+  margin-left: 168px;
     
     column-gap: 56px;
    
   
 }
 .textbox {
-    position: absolute;
+   position: absolute;
     margin-left: 160px;
     margin-top: 160px;
     width: 864px;
     margin-right: 88px;
+width: 50%;
+    
 }
 .hello{
    
@@ -88,26 +90,27 @@ body{
     color: #FBFBFB;
 }
 .headline{ 
-
+width: 100%;
 font-family: 'Poppins-Bold';
 font-style: normal;
 font-weight: 700;
 font-size: 64px;
 line-height: 80px;
-
+margin-right: 88px;
 margin-bottom: 32px;
-
+text-overflow: ellipsis;
+overflow: hidden;
 color: #FBFBFB;
 }
 .text {
-    
+    width: 80%;
 margin-bottom: 54px;
 font-family:'Poppins-Regular';
 font-style: normal;
 font-weight: 400;
 font-size: 24px;
 line-height: 40px;
-
+margin-right: 168px;
 
 color: #FBFBFB;
 }
@@ -144,8 +147,11 @@ order: 0;
 flex-grow: 0;
 }
 .container2{
-    width: 808px;
-    height: 1080px; 
+    width: 40%;
+    
+}
+.container2 > img {
+    width: 100%;
 }
 .button2 {
     border: none;
@@ -164,7 +170,7 @@ flex-grow: 0;
     position: absolute;
     width: 149px;
     height: 60px;
-    left: 1611px;
+    right: 0;
     top: 30px;
     
     
@@ -195,11 +201,11 @@ order: 0;
 flex-grow: 0;
 }
 .container3 {
-    width: 1352px;
-    height: 297px; 
+    width: 90%;
+    height: 297px;
     background: grey;
     position: absolute;
-    margin-top: 783px;
+    bottom: 0%;
        
     left: 0px;
 
@@ -225,7 +231,7 @@ flex-grow: 0;
 .box1{
     
     height: 177px;
-    width: 328px;
+    
 }
 .title { 
 margin-top: 30px;
@@ -250,10 +256,21 @@ color: #909090;
 .box2{
     
     height: 177px;
-    width: 328px;
+    
 }
 .box3 {
   
     height: 177px;
-    width: 328px;
+    
+}
+@media screen  and (max-width:768px){
+    .container2{
+        display: none!important;
+    }
+    .container1{
+        width: 100%!important;
+    }
+    .container3{
+        width:80%!important;
+    }
 }
